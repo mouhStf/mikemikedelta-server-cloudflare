@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Djolof Shop | La Vitesse du Live-Commerce</title>
+    <meta
+      name="description"
+      content="Passez de l'audience à la vente en quelques semaines avec une base live-commerce 90% prête et 100% adaptable."
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/common.css" />
+    <link rel="stylesheet" href="/works.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Surgical adjustments for the "Narrative" layout */
+      main {
+        overflow-x: hidden;
+      }
+      
+      .narrative-hero {
+        background: #1b1f24;
+        color: #fff;
+        padding: 120px 8vw;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 60px;
+        align-items: center;
+        margin-bottom: 0;
+      }
+
+      .hero-content h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        line-height: 1.1;
+        margin-bottom: 24px;
+        color: #fff;
+      }
+
+      .hero-content p.lead {
+        font-size: 1.4rem;
+        color: #94a3b8;
+        margin-bottom: 40px;
+        max-width: 600px;
+      }
+
+      .paper-section {
+        background: var(--paper-strong);
+        padding: 100px 8vw;
+        color: var(--ink);
+      }
+
+      .paper-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 60px;
+      }
+
+      .dark-tech-section {
+        background: #1b1f24;
+        padding: 100px 8vw;
+        color: #fff;
+      }
+
+      .glass-card-large {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        padding: 48px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .v-mockup {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        background: #000;
+        aspect-ratio: 16/9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .v-mockup video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .adaptation-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 40px;
+      }
+
+      .stat-item {
+        border-left: 2px solid var(--accent);
+        padding-left: 20px;
+      }
+
+      .stat-item h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--ink);
+      }
+
+      @media (max-width: 960px) {
+        .narrative-hero,
+        .glass-card-large {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .hero-content p.lead {
+          margin: 0 auto 40px;
+        }
+        .v-mockup {
+          max-width: 600px;
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .adaptation-grid {
+          grid-template-columns: 1fr;
+        }
+        .narrative-hero, .paper-section, .dark-tech-section {
+            padding: 80px 6vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="logo-static" href="/" data-lang-link>
+        <img src="/assets/logo.png" alt="MikeMikeDelta logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <div class="menu-item">
+          <a href="/services/" data-lang-link>Services</a>
+          <div class="submenu" role="menu">
+            <a href="/services/freelance.html" data-lang-link>Freelance</a>
+            <a href="/services/partenariat.html" data-lang-link>Partenariat</a>
+            <a href="/services/service-it-complet.html" data-lang-link>Service IT complet</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <a href="/works.html" data-lang-link>Projets</a>
+          <div class="submenu" role="menu">
+            <a href="/djolof-shop/" data-lang-link>Djolof Shop</a>
+            <a href="/pharmacync/" data-lang-link>Pharmacync</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <a href="/blog/" data-lang-link>Blog</a>
+          <div class="submenu" role="menu">
+            <a href="/blog/" data-lang-link>Mathématiques</a>
+            <a href="/blog/" data-lang-link>Informatique</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <a href="/contact/" data-lang-link>Contact</a>
+          <div class="submenu" role="menu">
+            <a href="/contact/" data-lang-link>Démarrer un projet</a>
+            <a href="/contact/" data-lang-link>Support</a>
+            <a href="/contact/" data-lang-link>Disponibilité</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- SECTION 1: THE HERO (Atmosphere & Transformation) -->
+      <section class="narrative-hero">
+        <div class="hero-content">
+          <p class="eyebrow" style="color: var(--accent)">
+            Vitesse & Performance
+          </p>
+          <h1>Ne créez pas une boutique. Lancez un mouvement.</h1>
+          <p class="lead">
+            Djolof Shop est une base live-commerce 90% prête. Nous personnalisons
+            les 10% restants pour que vous puissiez vendre en direct sous votre
+            propre marque en quelques semaines.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="/contact/" data-lang-link
+              >Démarrer votre adaptation</a
+            >
+            <a
+              class="button ghost"
+              href="#experience"
+              style="color: #fff; border-color: #fff"
+              >Voir l'expérience</a
+            >
+          </div>
+        </div>
+        <div class="v-mockup">
+          <!-- VIDEO 1: THE HERO VIBE (9:16 recommended) -->
+          <video autoplay muted loop playsinline>
+            <source src="/media/djolof-shop/video/hero-live.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <!-- SECTION 2: THE BUSINESS PILLARS (The "Why") -->
+      <section id="experience" class="paper-section">
+        <div style="max-width: 1000px; margin: 0 auto">
+          <h2>Une solution complète, déjà opérationnelle</h2>
+          <div class="feature-grid">
+            <div class="stat-item">
+              <h4>L'Expérience Client</h4>
+              <p>
+                Un flux vidéo sans latence, un chat interactif et un panier
+                d'achat qui ne quitte jamais l'écran. Acheter devient un jeu.
+              </p>
+            </div>
+            <div class="stat-item">
+              <h4>Le Pilotage Vendeur</h4>
+              <p>
+                Gérez vos stocks en temps réel pendant le live. Un tableau de
+                bord centralisé pour les commandes, les paiements et les
+                livraisons.
+              </p>
+            </div>
+            <div class="stat-item">
+              <h4>La Stabilité Technique</h4>
+              <p>
+                Propulsé par Go et PostgreSQL. Capable de supporter des pics
+                d'audience massifs sans ralentissement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: DEEP DIVE (The "Proof") -->
+      <section class="dark-tech-section">
+        <div class="glass-card-large">
+          <div>
+            <p class="eyebrow">Interface Vendeur</p>
+            <h3 style="color: #fff; margin-bottom: 20px;">Prenez le contrôle total de vos opérations</h3>
+            <p style="color: #94a3b8; margin: 20px 0">
+              Le back-office de Djolof Shop n'est pas qu'un outil de gestion,
+              c'est votre tour de contrôle. Suivi des stocks critique,
+              modération du chat en direct et analytics de vente instantanés.
+            </p>
+            <ul style="color: #cbd5e1; list-style: none; padding: 0">
+              <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--accent);">✓</span> Gestion multi-tailles et couleurs
+              </li>
+              <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--accent);">✓</span> Intégration paiements locaux (PayTech)
+              </li>
+              <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--accent);">✓</span> Impression d'étiquettes et suivi colis
+              </li>
+            </ul>
+          </div>
+          <div class="v-mockup">
+            <!-- VIDEO 2: THE DASHBOARD POWER -->
+            <video autoplay muted loop playsinline>
+              <source src="/media/djolof-shop/video/admin-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: ADAPTATION (The "Hook") -->
+      <section class="paper-section">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center">
+          <h2>Votre marque, vos règles</h2>
+          <p>
+            Djolof Shop est une fondation modulaire. Nous ne changeons pas
+            seulement le logo ; nous adaptons le moteur à votre métier.
+          </p>
+          <div class="adaptation-grid">
+            <div class="card" style="text-align: left">
+              <h4 style="margin-bottom: 10px">Ce que nous adaptons</h4>
+              <ul style="font-size: 0.9rem">
+                <li>Identité visuelle complète (UI/UX)</li>
+                <li>Workflows de livraison spécifiques</li>
+                <li>Rôles et permissions d'équipe</li>
+                <li>Intégrations CRM & ERP tiers</li>
+              </ul>
+            </div>
+            <div
+              class="card"
+              style="text-align: left; background: var(--accent-soft)"
+            >
+              <h4 style="margin-bottom: 10px">Ce qui reste solide</h4>
+              <ul style="font-size: 0.9rem">
+                <li>Moteur de streaming HLS ultra-rapide</li>
+                <li>Sécurité des transactions</li>
+                <li>Structure de données optimisée</li>
+                <li>Architecture Cloud scalable</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: FINAL CTA -->
+      <section class="dark-tech-section" style="text-align: center">
+        <div style="max-width: 600px; margin: 0 auto">
+          <h2>Prêt à passer à la vitesse supérieure ?</h2>
+          <p style="color: #94a3b8; margin-bottom: 30px">
+            Parlons de votre projet. Nous analysons vos besoins et vous
+            proposons une feuille de route pour votre adaptation en 48h.
+          </p>
+          <a
+            class="button"
+            href="/contact/"
+            style="padding: 18px 40px; font-size: 1.1rem"
+            data-lang-link
+            >Discuter de mon projet</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer page">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="MikeMikeDelta" class="footer-logo" />
+        <p>
+          Solutions logicielles modernes, performantes et adaptées à vos
+          besoins. Expertise en développement web, mobile et backend.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Navigation</h4>
+        <nav class="footer-nav">
+          <a href="/" data-lang-link>Accueil</a>
+          <a href="/services/" data-lang-link>Services</a>
+          <a href="/works.html" data-lang-link>Projets</a>
+          <a href="/blog/" data-lang-link>Blog</a>
+        </nav>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Légal</h4>
+        <nav class="footer-nav">
+          <a href="/privacy.html" data-lang-link
+            >Politique de confidentialité</a
+          >
+          <a href="/contact/" data-lang-link>Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MikeMikeDelta. Tous droits réservés.</p>
+        <p>
+          Marque du fondateur. Le nom légal apparaît sur les contrats et
+          factures.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+/* --- GLOBAL NAVIGATION & COMMON STYLES --- */
+
+:root {
+  --nav-height: 72px;
+}
+
+/* Fixed Standard Navbar */
+.topbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--stroke);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px; /* Standard wide padding */
+}
+
+.logo-static {
+  width: 52px;
+  height: 52px;
+  display: block;
+}
+
+.logo-static img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Navigation Typography (1.1rem uniform for all internal pages) */
+.main-nav {
+  display: flex;
+  gap: 2rem;
+  font-family: "Space Grotesk", sans-serif !important;
+}
+
+.menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item > a {
+  font-family: "Space Grotesk", sans-serif !important;
+  font-size: 1.1rem;
+  font-weight: 400 !important;
+  color: var(--ink);
+  padding: 8px 2px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.menu-item > a:hover {
+  color: var(--accent);
+}
+
+/* Submenus */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: -50px;
+  min-width: 220px;
+  background: var(--paper-strong);
+  border: 1px solid var(--stroke);
+  border-radius: 0; /* Standard sharp edges for submenus */
+  box-shadow: var(--shadow);
+  padding: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-item:hover .submenu {
+  display: flex;
+}
+
+.submenu a {
+  font-size: 1.1rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: var(--ink);
+  padding: 8px 10px;
+  border-radius: 0;
+  transition: background 0.2s;
+}
+
+.submenu a:hover {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 980px) {
+  .topbar { padding: 0 40px; }
+  .main-nav { gap: 1.5rem; }
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    padding: 0 20px;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .main-nav {
+    flex-wrap: wrap;
+    row-gap: 5px;
+  }
+
+  .menu-item:hover .submenu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    background: var(--accent-soft);
+    padding-left: 20px;
+  }
+}
+
+/* --- GLOBAL FOOTER --- */
+.footer.page {
+  background: #1a2133;
+  color: #ecf2f5;
+  padding: 80px 8vw 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  font-family: "Inter", sans-serif;
+  position: relative; /* Needed for z-index */
+  z-index: 10; /* High enough to cover fixed logo */
+  scroll-snap-align: end;
+}
+
+.footer-brand .footer-logo {
+  width: 48px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav a {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* --- GLOBAL CONTACT SECTIONS (FINAL CTA) --- */
+.final-cta {
+  background: var(--ink);
+  color: #fff;
+  padding: 100px 8vw;
+  border-radius: 40px 40px 0 0;
+  margin-top: 80px;
+}
+
+.engage-grid {
+  display: flex;
+  flex-direction: column; /* Stacked for better focus on large text */
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-text-content {
+  text-align: center;
+}
+
+.cta-text-content h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.cta-text-content p {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.contact-glass {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 60px;
+  border-radius: 32px;
+  width: 100%;
+}
+
+.contact-glass h3 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.modern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.modern-form input, 
+.modern-form select, 
+.modern-form textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 14px;
+  padding: 16px 20px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.modern-form input:focus, 
+.modern-form select:focus, 
+.modern-form textarea:focus {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.07);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(227, 106, 61, 0.1);
+}
+
+.modern-form textarea {
+  min-height: 280px; /* Maximum comfort for long writing */
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.modern-form select option {
+  background: #1b1f24;
+  color: #fff;
+}
+
+.modern-form button.button {
+  align-self: center;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.direct-actions-modern {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 760px) {
+  .form-row { grid-template-columns: 1fr; }
+  .contact-glass { padding: 30px 20px; }
+  .final-cta { padding: 60px 20px; }
+}
+
+@media (max-width: 768px) {
+  .footer.page {
+    grid-template-columns: 1fr;
+    padding: 40px 8vw 20px;
+  }
+}

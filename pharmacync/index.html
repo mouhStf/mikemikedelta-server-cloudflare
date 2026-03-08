@@ -17,10 +17,10 @@
     />
     <style>
       /* Surgical adjustments for the "Clinical" layout */
-      main { 
-        overflow-x: hidden; 
+      main {
+        overflow-x: hidden;
       }
-      
+
       .clinical-hero {
         background: #fbf7f1;
         color: var(--ink);
@@ -75,9 +75,22 @@
         transition: transform 0.3s ease;
       }
 
-      .glass-kpi:hover { transform: translateY(-10px); }
-      .glass-kpi .value { font-size: 2.5rem; font-weight: 700; color: var(--accent); display: block; margin-bottom: 10px; }
-      .glass-kpi .label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; }
+      .glass-kpi:hover {
+        transform: translateY(-10px);
+      }
+      .glass-kpi .value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--accent);
+        display: block;
+        margin-bottom: 10px;
+      }
+      .glass-kpi .label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #94a3b8;
+      }
 
       .feature-row {
         display: grid;
@@ -88,19 +101,31 @@
         background: #fff;
       }
 
-      .feature-row.reverse { direction: rtl; }
-      .feature-row.reverse > * { direction: ltr; }
+      .feature-row.reverse {
+        direction: rtl;
+      }
+      .feature-row.reverse > * {
+        direction: ltr;
+      }
 
       .mockup-container {
         width: 100%;
         border-radius: 12px;
-        box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
         overflow: hidden;
         border: 1px solid var(--stroke);
         background: #fff;
       }
 
-      .mockup-container video { width: 100%; display: block; }
+      .mockup-container video {
+        width: 100%;
+        display: block;
+      }
+
+      .mockup-container img {
+        width: 100%;
+        display: block;
+      }
 
       .tech-specs {
         background: #fbf7f1;
@@ -114,13 +139,33 @@
         gap: 40px;
       }
 
-      .spec-item h4 { font-size: 1.1rem; margin-bottom: 15px; color: var(--ink); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
-      .spec-item p { font-size: 0.95rem; line-height: 1.6; }
+      .spec-item h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        color: var(--ink);
+        border-bottom: 2px solid var(--accent);
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+      .spec-item p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
 
       @media (max-width: 960px) {
-        .clinical-hero, .feature-row, .specs-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-        .hero-content p.lead { margin: 0 auto 40px; }
-        .feature-row { padding: 60px 8vw; }
+        .clinical-hero,
+        .feature-row,
+        .specs-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+          text-align: center;
+        }
+        .hero-content p.lead {
+          margin: 0 auto 40px;
+        }
+        .feature-row {
+          padding: 60px 8vw;
+        }
       }
     </style>
   </head>
@@ -136,7 +181,9 @@
           <div class="submenu" role="menu">
             <a href="/services/freelance.html" data-lang-link>Freelance</a>
             <a href="/services/partenariat.html" data-lang-link>Partenariat</a>
-            <a href="/services/service-it-complet.html" data-lang-link>Service IT complet</a>
+            <a href="/services/service-it-complet.html" data-lang-link
+              >Service IT complet</a
+            >
           </div>
         </div>
         <div class="menu-item">
@@ -171,7 +218,9 @@
           <p class="eyebrow">Expertise Médicale & IT</p>
           <h1>La Rigueur au service de votre Pharmacie.</h1>
           <p class="lead">
-            Pharmacync n'est pas un simple inventaire. C'est une tour de contrôle C++/Qt conçue pour éliminer l'erreur humaine et maximiser la rentabilité de votre stock.
+            Pharmacync n'est pas un simple inventaire. C'est une tour de
+            contrôle C++/Qt conçue pour éliminer l'erreur humaine et maximiser
+            la rentabilité de votre stock.
           </p>
           <div class="hero-actions">
             <a class="button" href="/contact/">Demander une démo Desktop</a>
@@ -181,7 +230,14 @@
         <div class="mockup-container">
           <!-- VIDEO 1: APP OVERVIEW / SEARCH SPEED -->
           <video autoplay muted loop playsinline>
-            <source src="/media/pharmacync/video/search-speed.mp4" type="video/mp4" />
+            <source
+              src="/media/pharmacync/video/pharmacync.webm"
+              type="video/webm"
+            />
+            <source
+              src="/media/pharmacync/video/pharmacync.mp4"
+              type="video/mp4"
+            />
           </video>
         </div>
       </section>
@@ -214,74 +270,102 @@
         <div class="feature-text">
           <p class="eyebrow" style="color: var(--accent)">Traçabilité Totale</p>
           <h3>Gestion par Lot & Expirations</h3>
-          <p style="margin: 20px 0; color: var(--muted);">
-            Chaque unité de stock est liée à son numéro de lot, son prix d'acquisition et sa date de péremption. Notre algorithme anticipe les pertes et vous alerte avant que le produit ne devienne invendable.
+          <p style="margin: 20px 0; color: var(--muted)">
+            Chaque unité de stock est liée à son numéro de lot, son prix
+            d'acquisition et sa date de péremption. Notre algorithme anticipe
+            les pertes et vous alerte avant que le produit ne devienne
+            invendable.
           </p>
-          <ul style="list-style: none; padding: 0; color: var(--muted);">
-            <li style="margin-bottom: 12px">✓ Alertes intelligentes de péremption</li>
-            <li style="margin-bottom: 12px">✓ Historique complet des entrées/sorties</li>
-            <li style="margin-bottom: 12px">✓ Valorisation instantanée du stock (FIFO)</li>
+          <ul style="list-style: none; padding: 0; color: var(--muted)">
+            <li style="margin-bottom: 12px">
+              ✓ Alertes intelligentes de péremption
+            </li>
+            <li style="margin-bottom: 12px">
+              ✓ Historique complet des entrées/sorties
+            </li>
+            <li style="margin-bottom: 12px">
+              ✓ Valorisation instantanée du stock (FIFO)
+            </li>
           </ul>
         </div>
         <div class="mockup-container">
           <!-- VIDEO 2: BATCH TRACKING DEMO -->
-          <video autoplay muted loop playsinline>
-            <source src="/media/pharmacync/video/batch-tracking.mp4" type="video/mp4" />
-          </video>
+          <img src="/media/pharmacync/images/stock.png" />
         </div>
       </section>
 
       <!-- DEEP FEATURE 2: FINANCIAL ANALYTICS -->
-      <section class="feature-row reverse" style="background: #fbf7f1;">
+      <section class="feature-row reverse" style="background: #fbf7f1">
         <div class="feature-text">
           <p class="eyebrow" style="color: var(--accent)">Vision Stratégique</p>
           <h3>Tableau de Bord Décisionnel</h3>
-          <p style="margin: 20px 0; color: var(--muted);">
-            Ne naviguez plus à vue. Pharmacync calcule automatiquement votre taux de rotation, le délai moyen de réapprovisionnement et votre chiffre d'affaires prévisionnel.
+          <p style="margin: 20px 0; color: var(--muted)">
+            Ne naviguez plus à vue. Pharmacync calcule automatiquement votre
+            taux de rotation, le délai moyen de réapprovisionnement et votre
+            chiffre d'affaires prévisionnel.
           </p>
-          <ul style="list-style: none; padding: 0; color: var(--muted);">
+          <ul style="list-style: none; padding: 0; color: var(--muted)">
             <li style="margin-bottom: 12px">✓ Analyse des pertes & casses</li>
-            <li style="margin-bottom: 12px">✓ Taux de conformité réglementaire</li>
-            <li style="margin-bottom: 12px">✓ Statistiques de vente par catégorie</li>
+            <li style="margin-bottom: 12px">
+              ✓ Taux de conformité réglementaire
+            </li>
+            <li style="margin-bottom: 12px">
+              ✓ Statistiques de vente par catégorie
+            </li>
           </ul>
         </div>
         <div class="mockup-container">
           <!-- VIDEO 3: ANALYTICS DASHBOARD -->
-          <video autoplay muted loop playsinline>
-            <source src="/media/pharmacync/video/stock-analytics.mp4" type="video/mp4" />
-          </video>
+
+          <img src="/media/pharmacync/images/inventaire.png" />
         </div>
       </section>
 
       <!-- TECH SPECS -->
       <section class="tech-specs">
-        <div style="max-width: 1000px; margin: 0 auto;">
-          <h2 style="text-align: center; margin-bottom: 50px;">Une Fondation Industrielle</h2>
+        <div style="max-width: 1000px; margin: 0 auto">
+          <h2 style="text-align: center; margin-bottom: 50px">
+            Une Fondation Industrielle
+          </h2>
           <div class="specs-grid">
             <div class="spec-item">
               <h4>Performance Native</h4>
-              <p>Développé en C++ avec le framework Qt. Une rapidité d'exécution inégalée, même avec des bases de données de plus de 100 000 références.</p>
+              <p>
+                Développé en C++ avec le framework Qt. Une rapidité d'exécution
+                inégalée, même avec des bases de données de plus de 100 000
+                références.
+              </p>
             </div>
             <div class="spec-item">
               <h4>Zéro Latence</h4>
-              <p>Architecture Desktop optimisée. Pas de dépendance au cloud pour les opérations critiques de vente et de gestion de stock.</p>
+              <p>
+                Architecture Desktop optimisée. Pas de dépendance au cloud pour
+                les opérations critiques de vente et de gestion de stock.
+              </p>
             </div>
             <div class="spec-item">
               <h4>Intégrité des Données</h4>
-              <p>Moteur de base de données PostgreSQL/SQLite robuste, garantissant la cohérence de vos transactions et de votre inventaire.</p>
+              <p>
+                Moteur de base de données PostgreSQL/SQLite robuste,
+                garantissant la cohérence de vos transactions et de votre
+                inventaire.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- FINAL CTA -->
-      <section class="data-section" style="text-align: center;">
-        <div style="max-width: 600px; margin: 0 auto;">
+      <section class="data-section" style="text-align: center">
+        <div style="max-width: 600px; margin: 0 auto">
           <h2>Optimisez votre officine aujourd'hui</h2>
-          <p style="color: #94a3b8; margin-bottom: 30px;">
-            La base technique est prête. Nous l'adaptons à vos workflows spécifiques et à votre nomenclature locale en un temps record.
+          <p style="color: #94a3b8; margin-bottom: 30px">
+            La base technique est prête. Nous l'adaptons à vos workflows
+            spécifiques et à votre nomenclature locale en un temps record.
           </p>
-          <a class="button" href="/contact/" style="padding: 18px 40px;">Discuter de l'adaptation</a>
+          <a class="button" href="/contact/" style="padding: 18px 40px"
+            >Discuter de l'adaptation</a
+          >
         </div>
       </section>
     </main>
@@ -289,7 +373,10 @@
     <footer class="footer page">
       <div class="footer-brand">
         <img src="/assets/logo.png" alt="MikeMikeDelta" class="footer-logo" />
-        <p>Solutions logicielles modernes, performantes et adaptées à vos besoins.</p>
+        <p>
+          Solutions logicielles modernes, performantes et adaptées à vos
+          besoins.
+        </p>
       </div>
 
       <div>
@@ -310,7 +397,15 @@
         </nav>
       </div>
 
-      <div class="footer-bottom" style="grid-column: 1/-1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px;">
+      <div
+        class="footer-bottom"
+        style="
+          grid-column: 1/-1;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding-top: 20px;
+          margin-top: 40px;
+        "
+      >
         <p>&copy; 2026 MikeMikeDelta. Tous droits réservés.</p>
       </div>
     </footer>

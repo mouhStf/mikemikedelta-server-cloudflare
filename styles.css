@@ -78,9 +78,15 @@
   margin-top: 40px;
 }
 
-.scroll-indicator.dark .mouse { border-color: var(--ink); }
-.scroll-indicator.dark .wheel { background: var(--ink); }
-.scroll-indicator.dark .arrow span { border-color: var(--ink); }
+.scroll-indicator.dark .mouse {
+  border-color: var(--ink);
+}
+.scroll-indicator.dark .wheel {
+  background: var(--ink);
+}
+.scroll-indicator.dark .arrow span {
+  border-color: var(--ink);
+}
 
 * {
   box-sizing: border-box;
@@ -798,13 +804,6 @@ canvas {
   margin-bottom: 30px;
 }
 
-.djolof-buttons {
-  display: flex;
-  justify-content: right;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
 .project-vision {
   font-size: 1.2rem;
   color: var(--muted);
@@ -813,10 +812,11 @@ canvas {
 }
 
 .project-video-large {
+  height: calc(100dvh - 155px);
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
   background: #000;
   aspect-ratio: 16/9;
 }
@@ -843,10 +843,20 @@ canvas {
   line-height: 1.5;
 }
 
-.djolof-showcase, .djolof-details, .phar-showcase, .phar-details {
+.djolof-showcase,
+.djolof-details,
+.phar-showcase,
+.phar-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.djolof-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .djolof-buttons {

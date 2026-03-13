@@ -81,9 +81,11 @@
 .scroll-indicator.dark .mouse {
   border-color: var(--ink);
 }
+
 .scroll-indicator.dark .wheel {
   background: var(--ink);
 }
+
 .scroll-indicator.dark .arrow span {
   border-color: var(--ink);
 }
@@ -236,6 +238,7 @@ canvas {
     opacity: 0;
     transform: translate(-50%, -45%);
   }
+
   to {
     opacity: 1;
     transform: translate(-50%, -50%);
@@ -325,6 +328,7 @@ canvas {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
+
   100% {
     opacity: 0;
     transform: translateX(-50%) translateY(15px);
@@ -336,9 +340,11 @@ canvas {
     opacity: 0;
     transform: rotate(45deg) translate(-10px, -10px);
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: rotate(45deg) translate(10px, 10px);
@@ -421,7 +427,8 @@ canvas {
   font-size: clamp(4rem, 15vw, 12rem);
   font-weight: 700;
   color: var(--ink);
-  opacity: 0.02; /* Extremely subtle */
+  opacity: 0.02;
+  /* Extremely subtle */
   white-space: nowrap;
   user-select: none;
   pointer-events: none;
@@ -429,7 +436,8 @@ canvas {
 }
 
 .menu-scroll {
-  bottom: 80px !important; /* Higher up than home scroll */
+  bottom: 80px !important;
+  /* Higher up than home scroll */
   opacity: 0.3;
 }
 
@@ -525,9 +533,11 @@ canvas {
     justify-content: space-around;
     gap: 1rem;
   }
+
   .menu-services {
     width: auto;
   }
+
   .parts {
     display: none;
     overflow: hidden;
@@ -549,6 +559,7 @@ canvas {
   from {
     inset: auto auto 40px auto;
   }
+
   to {
     inset: 40px auto auto auto;
     position: absolute;
@@ -568,11 +579,9 @@ canvas {
   padding: 0 8vw;
 
   color: var(--ink);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -584,16 +593,12 @@ canvas {
   scroll-snap-align: start;
   background-color: #5c5d5d;
   background-image:
-    radial-gradient(
-      circle at 30% 20%,
+    radial-gradient(circle at 30% 20%,
       rgba(255, 255, 255, 0.05) 0%,
-      transparent 50%
-    ),
-    linear-gradient(
-      145deg,
+      transparent 50%),
+    linear-gradient(145deg,
       rgba(255, 255, 255, 0.03) 0%,
-      rgba(0, 0, 0, 0.1) 100%
-    );
+      rgba(0, 0, 0, 0.1) 100%);
   background-size:
     cover,
     4px 4px;
@@ -702,7 +707,8 @@ canvas {
 .sticky-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* This is the key property */
+  object-fit: contain;
+  /* This is the key property */
   object-position: bottom;
 }
 
@@ -733,15 +739,20 @@ canvas {
   -webkit-backdrop-filter: blur(20px);
 
   /* 3. The "Double Edge" - A dark outer border + a bright inner highlight */
-  border: 1px solid rgba(0, 0, 0, 0.05); /* Very faint dark edge */
-  outline: 1px solid rgba(255, 255, 255, 0.8); /* Crisp white inner edge */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Very faint dark edge */
+  outline: 1px solid rgba(255, 255, 255, 0.8);
+  /* Crisp white inner edge */
   outline-offset: -2px;
 
   /* 4. Layered Shadows: One for "lift", one for "contact" */
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.05),
-    /* Small sharp shadow */ 0 20px 25px -5px rgba(0, 0, 0, 0.08),
-    /* Broad soft shadow */ inset 0 0 15px rgba(255, 255, 255, 0.5); /* Inner milky glow */
+    /* Small sharp shadow */
+    0 20px 25px -5px rgba(0, 0, 0, 0.08),
+    /* Broad soft shadow */
+    inset 0 0 15px rgba(255, 255, 255, 0.5);
+  /* Inner milky glow */
 
   border-radius: 16px;
   padding: 24px;
@@ -817,7 +828,7 @@ canvas {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-  background: #000;
+  background: #fff;
   aspect-ratio: 16/9;
 }
 
@@ -900,6 +911,7 @@ canvas {
   display: flex;
   align-items: center;
 }
+
 .project-showcase2 {
   height: calc(100vh - 282px);
   height: calc(100dvh - 282px);
